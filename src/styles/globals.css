@@ -4,6 +4,11 @@
 @tailwind utilities;
 
 body {
-  /* @apply bg-white text-[#1f2937] dark:bg-[#222222] dark:text-[#e5e7eb]; */
   @apply bg-white text-gray-800 dark:bg-neutral-900 dark:text-gray-200;
+}
+
+.hover-link {
+  @apply transition-colors 
+    hover:text-blue-700 hover:font-semibold
+    dark:hover:text-yellow-300;
 }

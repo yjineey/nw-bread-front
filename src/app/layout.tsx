@@ -1,5 +1,7 @@
 import '@/styles/globals.css'
-import ThemeToggle from '@/components/ThemeToggle'
+import HeaderSub from '@/components/HeaderSub'
+import HeaderMain from '@/components/HeaderMain'
+import Footer from '@/components/Footer'
 
 export default function RootLayout({
   children,
@@ -25,14 +27,18 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <header className="p-4 border-b flex justify-between">
-          <span className="font-bold">BREAD 프로젝트</span>
-          <ThemeToggle />
-        </header>
-        <main className="p-4">{children}</main>
-        <footer className="p-4 border-t-2 text-sm text-center">
-          푸터 영역
-        </footer>
+        <div className="max-w-screen-lg mx-auto min-h-screen flex flex-col">
+          <header className="relative z-30">
+            <HeaderSub />
+            <HeaderMain />
+          </header>
+          <main className="relative z-0 flex-1 p-2 border-b mb-12 md:mb-0">
+            {children}
+          </main>
+          <footer className="justify-center z-30 py-4">
+            <Footer />
+          </footer>
+        </div>
       </body>
     </html>
   )

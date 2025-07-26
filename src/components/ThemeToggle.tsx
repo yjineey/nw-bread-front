@@ -17,14 +17,18 @@ export default function ThemeToggle() {
   }, [])
 
   const toggleTheme = () => {
-    const next = !isDark
-    setIsDark(next)
-    document.documentElement.classList.toggle('dark', next)
-    localStorage.setItem('theme', next ? 'dark' : 'light')
+    const nextTheme = !isDark
+    setIsDark(nextTheme)
+    document.documentElement.classList.toggle('dark', nextTheme)
+    localStorage.setItem('theme', nextTheme ? 'dark' : 'light')
   }
 
   return (
-    <button onClick={toggleTheme} className="p-2 border rounded text-sm">
+    <button
+      onClick={toggleTheme}
+      className="p-2 border rounded text-sm hover-link hover:border-blue-700
+              dark:hover:border-yellow-300"
+    >
       <Icon />
     </button>
   )
