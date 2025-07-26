@@ -45,7 +45,6 @@ jobs:
       - name: Build and export
         run: |
           pnpm build
-          pnpm export
 
       # 5. GitHub Pages용 아티팩트 업로드
       - uses: actions/upload-pages-artifact@v3
