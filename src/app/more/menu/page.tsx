@@ -29,7 +29,7 @@ const adminMenu = [
 
 export default function MenuPage() {
   return (
-    <main className="p-4 max-w-screen-md mx-auto  spacer">
+    <main className="page-wrapper max-w-screen-md mx-auto spacer">
       {/* 사용자 메뉴 */}
       <section className="rounded-xl p-4 mb-2 bg-white dark:bg-gray-800 shadow">
         <h2 className="text-sm font-semibold mb-4 text-gray-700 dark:text-gray-200">

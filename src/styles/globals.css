@@ -12,3 +12,11 @@ body {
     hover:text-blue-700 hover:font-semibold
     dark:hover:text-yellow-300;
 }
+
+/* .header-wrapper {
+  @apply h-16 px-4 flex items-center justify-between border-b;
+} */
+
+.page-wrapper {
+  @apply p-4 max-w-screen-md mx-auto flex-1 overflow-y-auto;
+}

@@ -51,7 +51,7 @@ export const AuthItems = [
 ]
 export default function HeaderMain() {
   return (
-    <div className="h-16 flex items-center justify-between px-4 border-b">
+    <>
       <div className="flex gap-4 text-sm font-medium mr-4">
         {MenuItems.map(({ label, href, icon: Icon }) => (
           <Link
@@ -77,6 +77,6 @@ export default function HeaderMain() {
         ))}
         <ThemeToggle />
       </div>
-    </div>
+    </>
   )
 }

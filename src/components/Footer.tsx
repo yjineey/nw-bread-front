@@ -52,7 +52,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="hidden md:flex item-center justify-center p-3 border-t gap-4">
+      <div className="hidden md:flex item-center justify-center p-3 gap-4">
         <img
           src={imgPath(`/logos/nw_logo.png`)}
           alt="nw-footer-logo"

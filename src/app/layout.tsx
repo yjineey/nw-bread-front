@@ -1,16 +1,16 @@
 import '@/styles/globals.css'
-import HeaderSub from '@/components/HeaderSub'
-import HeaderMain from '@/components/HeaderMain'
+import Section from '@/components/Section'
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata = {
   title: 'Newway Bread',
-  description: '뉴웨이교회 성경어플입니다.',
+  description: '뉴웨이교회 성경 웹앱입니다.',
   openGraph: {
     type: 'website',
     siteName: '뉴웨이교회',
     title: 'Newway Bread',
-    description: '뉴웨이교회 성경어플입니다.',
+    description: '뉴웨이교회 웹앱입니다.',
     url: 'https://yjineey.github.io/nw-bread-front/',
     images: [
       {
@@ -46,21 +46,23 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <div className="max-w-screen-lg mx-auto min-h-screen flex flex-col">
-          <header className="relative z-30">
-            <HeaderSub />
-            <HeaderMain />
-          </header>
-          <main
-            className="relative z-0 flex-1 overflow-y-auto "
-            style={{ height: 'calc(100vh - 12rem)' }}
-          >
-            {children}
-          </main>
-          <footer className="justify-center z-30 py-4">
-            <Footer />
-          </footer>
-        </div>
+        <body>
+          <div className="max-w-screen-lg mx-auto h-screen flex flex-col overflow-hidden">
+            <div className="sticky top-0 z-30 h-16 px-4 flex items-center justify-between border-b">
+              <Section />
+            </div>
+
+            <div className="h-16 px-4 z-30 flex items-center justify-between border-b">
+              <Header />
+            </div>
+
+            <main className="flex-1 overflow-y-auto">{children}</main>
+
+            <footer className="h-auto flex items-center justify-center border-t z-30">
+              <Footer />
+            </footer>
+          </div>
+        </body>
       </body>
     </html>
   )
