@@ -23,38 +23,41 @@ jobs:
         with:
           node-version: '20'
 
-      - run: corepack enable
-      - run: corepack prepare pnpm@8.15.4 --activate
-      - run: pnpm --version
+      - name: Enable and prepare pnpm@10.12.1 via Corepack
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.12.1 --activate
+          pnpm --version
 
       # 3. pnpm 캐시
-      - uses: actions/cache@v3
+      - name: Restore pnpm cache
+        uses: actions/cache@v3
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
-      # 4. 디버깅용 로그 (선택)
-      - run: ls -la
-      - run: cat pnpm-lock.yaml
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      # 5. 의존성 설치 및 빌드, 정적 export
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm build
-      - run: pnpm export
+      # 4. 의존성 설치 및 빌드, 정적 export
+      - name: Build and export
+        run: |
+          pnpm build
+          pnpm export
 
-      # 6. GitHub Pages용 아티팩트 업로드
+      # 5. GitHub Pages용 아티팩트 업로드
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: out # export된 정적 파일 디렉토리
+          path: out
 
   deploy:
-    needs: build # build 작업이 완료된 후 실행
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4 # GitHub Pages에 배포
+        uses: actions/deploy-pages@v4
