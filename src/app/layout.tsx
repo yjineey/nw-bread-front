@@ -51,7 +51,10 @@ export default function RootLayout({
             <HeaderSub />
             <HeaderMain />
           </header>
-          <main className="relative z-0 flex-1 p-2 border-b mb-12 md:mb-0">
+          <main
+            className="relative z-0 flex-1 overflow-y-auto "
+            style={{ height: 'calc(100vh - 12rem)' }}
+          >
             {children}
           </main>
           <footer className="justify-center z-30 py-4">

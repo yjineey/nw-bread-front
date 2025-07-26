@@ -1,10 +1,9 @@
 import Link from 'next/link'
 import {
   BookOpenText,
-  NotebookPen,
-  LibraryBig,
-  Cross,
-  Droplets,
+  Heart,
+  Sun,
+  ShieldCheck,
   UserPlus,
   LogIn,
   UserCircle,
@@ -20,17 +19,17 @@ export const MenuItems = [
   {
     label: '오늘의 QT',
     href: '/bible/qt',
-    icon: NotebookPen,
+    icon: Heart,
   },
   {
     label: '성경통독',
     href: '/bible/read',
-    icon: Cross,
+    icon: Sun,
   },
   {
     label: '보혈선포기도문',
     href: '/bible/blood',
-    icon: Droplets,
+    icon: ShieldCheck,
   },
 ]
 export const AuthItems = [
