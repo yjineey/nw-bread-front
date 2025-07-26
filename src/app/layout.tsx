@@ -1,8 +1,26 @@
 import '@/styles/globals.css'
-import SNSHead from '@/components/SNSHead'
 import HeaderSub from '@/components/HeaderSub'
 import HeaderMain from '@/components/HeaderMain'
 import Footer from '@/components/Footer'
+
+export const metadata = {
+  title: 'Newway Bread',
+  description: '뉴웨이교회 성경어플입니다.',
+  openGraph: {
+    type: 'website',
+    siteName: '뉴웨이교회',
+    title: 'Newway Bread',
+    description: '뉴웨이교회 성경어플입니다.',
+    url: 'https://yjineey.github.io/nw-bread-front/',
+    images: [
+      {
+        url: 'https://cdn.imweb.me/upload/S2023020869d0205dba053/94d155e4d81c7.png',
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+}
 
 export default function RootLayout({
   children,
@@ -12,7 +30,6 @@ export default function RootLayout({
   return (
     <html lang="ko" className="dark">
       <head>
-        <SNSHead />
         <script
           dangerouslySetInnerHTML={{
             __html: `
