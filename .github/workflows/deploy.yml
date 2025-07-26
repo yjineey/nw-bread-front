@@ -19,10 +19,11 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '20'
 
       - run: corepack enable
       - run: corepack prepare pnpm@8.15.4 --activate # 버전 고정
+      - run: pnpm --version
 
       # pnpm이 설치된 후에 캐시 설정
       - uses: actions/cache@v3
@@ -32,9 +33,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-
 
+      # ✅ 디버깅 로그 – 확인에 매우 도움 됨
+      - run: ls -la
+      - run: cat pnpm-lock.yaml
+
+      # ✅ 설치 및 빌드
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
-      - run: pnpm export # 👈 next export 실행 (필수)
+      - run: pnpm export
 
       - uses: actions/upload-pages-artifact@v3 # 빌드된 파일을 GitHub Pages에 업로드
         with:
