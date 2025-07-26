@@ -1,8 +1,11 @@
 import type { NextConfig } from 'next'
 
+const isProd = process.env.NODE_ENV === 'production'
+
 const nextConfig: NextConfig = {
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  trailingSlash: true, // SSR 시 false
+  output: 'export',
+  basePath: isProd ? '/nw-bread-front' : '',
+  trailingSlash: true,
   reactStrictMode: true,
 }
 
