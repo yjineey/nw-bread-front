@@ -49,7 +49,7 @@ export const MobileItems = [
   },
   {
     label: '더보기',
-    href: '/more',
+    href: '#',
     icon: Menu,
   },
 ]

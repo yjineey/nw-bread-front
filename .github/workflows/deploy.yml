@@ -13,6 +13,8 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest # 빌드 작업을 위한 환경 설정
+    env:
+      NEXT_PUBLIC_BASE_PATH: /nw-bread-front
 
     steps:
       # 1. Checkout
