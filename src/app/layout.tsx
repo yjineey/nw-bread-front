@@ -1,4 +1,5 @@
 import '@/styles/globals.css'
+import SNSHead from '@/components/SNSHead'
 import HeaderSub from '@/components/HeaderSub'
 import HeaderMain from '@/components/HeaderMain'
 import Footer from '@/components/Footer'
@@ -11,6 +12,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className="dark">
       <head>
+        <SNSHead />
         <script
           dangerouslySetInnerHTML={{
             __html: `
