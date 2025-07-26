@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📖 NW-BREAD
 
-## Getting Started
+Next.js 기반의 뉴웨이교회 성경 웹 애플리케이션
 
-First, run the development server:
+## 📦 기술 스택
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [pnpm](https://pnpm.io/)
+- [Node.js](https://nodejs.org/)
+
+## 🛠️ 개발 환경 설정 및 실행 방법
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# 의존성 설치
+pnpm install
+
+# 개발 서버 실행
 pnpm dev
-# or
-bun dev
+
+# 프로덕션 빌드 (SSR)
+pnpm build
+
+# 빌드 결과 미리보기
+pnpm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📁 폴더 구조
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+nw-bread-front/
+├── public/                      # 정적 리소스 (이미지, 아이콘 등)
+├── src/
+│   ├── app/
+│   │   ├── layout.tsx           # 공통 HTML 구조
+│   │   ├── page.tsx             # 홈 페이지
+│   │   ├── admin/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── users/page.tsx
+│   │   │   ├── posts/page.tsx
+│   │   │   └── settings/page.tsx
+│   │   ├── bible/
+│   │   │   ├── layout.tsx
+│   │   │   ├── page.tsx
+│   │   │   ├── oneread/page.tsx
+│   │   │   ├── qt/page.tsx
+│   │   │   ├── prayer/page.tsx
+│   │   │   └── blood/page.tsx
+│   │   └── auth/
+│   │       ├── login/page.tsx
+│   │       ├── signup/page.tsx
+│   │       └── profile/page.tsx
+│   │
+│   ├── components/
+│   │   ├── Header.tsx
+│   │   ├── Footer.tsx
+│   │   └── ThemeToggle.tsx
+│   │
+│   ├── styles/
+│   │   ├── globals.css         # 전역 Tailwind 스타일
+│   │   ├── admin.css
+│   │   └── bible.css
+│   │
+│   └── utils/                   # 유틸 함수
+│
+├── .gitignore
+├── .prettierrc
+├── .eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── README.md
+├── tailwind.config.js
+└── tsconfig.json
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+## 📑 라이선스 (License)
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+© 2025. NEWWAY CHURCH All rights reserved.
