@@ -11,6 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="dark">
+      <SNSHead />
       <head>
         <script
           dangerouslySetInnerHTML={{
