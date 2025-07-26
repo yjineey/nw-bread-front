@@ -1,4 +1,6 @@
 import Link from 'next/link'
+import { imgPath } from '@/lib/imgPath'
+
 import {
   BookOpenText,
   NotebookPen,
@@ -58,8 +60,8 @@ export default function Footer() {
     <>
       <div className="hidden md:flex item-center justify-center p-2">
         <img
-          src="/logos/nw_sm_logo.png"
-          alt="NEWWAY 로고"
+          src={imgPath(`/logos/nw_sm_logo.png`)}
+          alt="nw-footer-logo"
           className="w-48 h-auto invert dark:invert-0"
         />
         <div className="space-y-1 text-left">

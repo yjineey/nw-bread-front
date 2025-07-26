@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  basePath: '/nw-bread-front', // GitHub Pages 쓰는 게 아니라면 생략
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   trailingSlash: true, // SSR 시 false
   reactStrictMode: true,
 }
