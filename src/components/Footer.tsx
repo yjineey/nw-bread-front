@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { imgPath } from '@/lib/imgPath'
-
+import Image from 'next/image'
 import { BookOpenText, Heart, HomeIcon, UserIcon, Menu } from 'lucide-react'
 
 export const SNSItems = [
@@ -53,7 +53,7 @@ export default function Footer() {
   return (
     <>
       <div className="hidden md:flex item-center justify-center p-3 gap-4">
-        <img
+        <Image
           src={imgPath(`/logos/nw_logo.png`)}
           alt="nw-footer-logo"
           className="w-72 h-16 invert-0 dark:invert"
@@ -71,7 +71,7 @@ export default function Footer() {
                 className="flex items-center gap-2 hover-link"
                 target="_blank"
               >
-                <img
+                <Image
                   src={imgPath(Icon)}
                   alt={label}
                   className="w-4 h-4 dark:invert"
