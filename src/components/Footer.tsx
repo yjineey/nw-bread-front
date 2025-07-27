@@ -85,13 +85,14 @@ export default function Footer() {
       </div>
       <div className="fixed md:hidden h-16 bottom-0 left-0 right-0 p-4 border-t bg-neutral-900 text-gray-200">
         <div className="flex">
-          {MobileItems.map(({ href, icon: Icon }) => (
+          {MobileItems.map(({ label, href, icon: Icon }) => (
             <Link
               key={href}
               href={href}
-              className="flex-1 flex items-center justify-center"
+              className="flex-1 flex flex-col items-center justify-center"
             >
-              <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+              <Icon className="w-5 h-5 text-white" />
+              <span className="text-sm">{label}</span>
             </Link>
           ))}
         </div>
