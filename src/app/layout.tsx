@@ -56,9 +56,9 @@ export default function RootLayout({
               <Header />
             </div>
 
-            <main className="flex-1 overflow-y-auto">{children}</main>
+            <main className="flex-1 overflow-y-auto md:pb-0">{children}</main>
 
-            <footer className="h-auto flex items-center justify-center border-t z-30">
+            <footer className="h-16 md:h-auto  flex items-center justify-center border-t z-30">
               <Footer />
             </footer>
           </div>
