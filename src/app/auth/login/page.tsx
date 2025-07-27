@@ -1,5 +1,7 @@
 'use client'
 import Link from 'next/link'
+import { imgPath } from '@/lib/imgPath'
+
 export default function Page() {
   const KAKAO_CLIENT_ID = '카카오REST_API키' // ⬅️ 여기에 본인 키 넣으세요
   const REDIRECT_URI = 'http://localhost:3000/api/auth/kakao/callback' // 또는 배포 URI
@@ -13,12 +15,12 @@ export default function Page() {
     <div className="absolute inset-0 flex flex-col items-center justify-center text-center space-y-4">
       {/* PC/태블릿용 큰 버튼 */}
       <button onClick={handleKakaoLogin} className="hidden sm:block">
-        <img src="/logos/kakao_login_lg.png" alt="카카오 로그인" />
+        <img src={imgPath(`/logos/kakao_login_lg.png`)} alt="카카오 로그인" />
       </button>
 
       {/* 모바일용 작은 버튼 */}
       <button onClick={handleKakaoLogin} className="block sm:hidden">
-        <img src="/logos/kakao_login_sm.png" alt="카카오 로그인" />
+        <img src={imgPath(`/logos/kakao_login_sm.png`)} alt="카카오 로그인" />
       </button>
 
       {/* 회원가입 링크 */}
