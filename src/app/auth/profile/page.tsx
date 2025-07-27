@@ -3,8 +3,13 @@
 import { useState, useEffect } from 'react'
 import '@/styles/mypage.css'
 
+type User = {
+  name: string
+  email: string
+}
+
 export default function MyPage() {
-  const [user, setUser]: any = useState(null)
+  const [user, setUser] = useState<User | null>(null)
   const [nickname, setNickname] = useState('')
   const [phone, setPhone] = useState('')
 
@@ -38,7 +43,7 @@ export default function MyPage() {
             <label className="mypage-label">이메일</label>
             <input
               type="email"
-              value={user?.email}
+              value={user?.email ?? ''}
               readOnly
               className="mypage-input mypage-input-disabled"
             />
