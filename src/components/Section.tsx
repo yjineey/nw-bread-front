@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import { imgPath } from '@/lib/imgPath'
-import Image from 'next/image'
 
 export default function Page() {
   return (
     <>
       <Link href="/">
         <div className="font-bold flex items-center gap-2 text-lg">
-          <Image
+          <img
             src={imgPath(`/logos/nw_favicon-152.png`)}
             alt="nw-header-logo"
             className="w-8 h-auto gap-2"
