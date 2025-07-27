@@ -1,5 +1,6 @@
 'use client'
 
+import '@/styles/menu.css'
 import Link from 'next/link'
 import {
   BookOpen,
@@ -29,48 +30,32 @@ const adminMenu = [
 
 export default function MenuPage() {
   return (
-    <main className="page-wrapper max-w-screen-md mx-auto spacer">
+    <div className="page-wrapper max-w-screen-md mx-auto spacer">
       {/* 사용자 메뉴 */}
-      <section className="rounded-xl p-4 mb-2 bg-white dark:bg-gray-800 shadow">
-        <h2 className="text-sm font-semibold mb-4 text-gray-700 dark:text-gray-200">
-          사용자 메뉴
-        </h2>
+      <section className="section-card">
+        <h2 className="section-title">사용자 메뉴</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {userMenu.map(({ label, href, icon: Icon }) => (
-            <Link
-              key={href}
-              href={href}
-              className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-            >
-              <Icon className="w-6 h-6 mb-2 text-gray-700 dark:text-gray-200" />
-              <span className="text-sm text-gray-800 dark:text-gray-100">
-                {label}
-              </span>
+            <Link key={href} href={href} className="menu-card">
+              <Icon className="menu-icon" />
+              <span className="menu-label">{label}</span>
             </Link>
           ))}
         </div>
       </section>
 
       {/* 관리자 메뉴 */}
-      <section className="rounded-xl p-4 bg-white dark:bg-gray-800 shadow">
-        <h2 className="text-sm font-semibold mb-4 text-gray-700 dark:text-gray-200">
-          관리자 메뉴
-        </h2>
+      <section className="section-card">
+        <h2 className="section-title">관리자 메뉴</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           {adminMenu.map(({ label, href, icon: Icon }) => (
-            <Link
-              key={href}
-              href={href}
-              className="flex flex-col items-center justify-center p-4 rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
-            >
-              <Icon className="w-6 h-6 mb-2 text-gray-700 dark:text-gray-200" />
-              <span className="text-sm text-gray-800 dark:text-gray-100">
-                {label}
-              </span>
+            <Link key={href} href={href} className="menu-card">
+              <Icon className="menu-icon" />
+              <span className="menu-label">{label}</span>
             </Link>
           ))}
         </div>
       </section>
-    </main>
+    </div>
   )
 }

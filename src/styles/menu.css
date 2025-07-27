@@ -1,0 +1,19 @@
+.section-card {
+  @apply rounded-xl p-4 mb-2 bg-gray-100 dark:bg-neutral-800 shadow;
+}
+
+.section-title {
+  @apply text-sm font-semibold mb-4 text-gray-800 dark:text-gray-100;
+}
+
+.menu-card {
+  @apply flex flex-col items-center justify-center p-4 rounded-lg bg-gray-200 dark:bg-neutral-700 hover:bg-gray-300 dark:hover:bg-neutral-600 transition-colors;
+}
+
+.menu-icon {
+  @apply w-6 h-6 mb-2 text-gray-800 dark:text-gray-100;
+}
+
+.menu-label {
+  @apply text-sm text-gray-700 dark:text-gray-300;
+}
