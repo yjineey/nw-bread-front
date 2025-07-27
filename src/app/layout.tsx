@@ -4,13 +4,11 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Newway Bread',
-  description: '뉴웨이교회 성경 웹앱입니다.',
   openGraph: {
     type: 'website',
     siteName: '뉴웨이교회',
-    title: 'Newway Bread',
-    description: '뉴웨이교회 웹앱입니다.',
+    title: 'NEWWAY BREAD',
+    description: '뉴웨이교회 성경 어플입니다',
     url: 'https://yjineey.github.io/nw-bread-front/',
     images: [
       {
