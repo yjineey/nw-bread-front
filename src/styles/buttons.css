@@ -1,0 +1,21 @@
+/* 버튼 전용 스타일 */
+
+.btn-base {
+  @apply w-full rounded-md py-2 text-sm font-medium transition;
+}
+
+.btn-indigo {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+.btn-emerald {
+  @apply bg-emerald-500 text-white hover:bg-emerald-600;
+}
+
+.btn-amber {
+  @apply bg-amber-400 text-black hover:bg-amber-500;
+}
+
+.btn-rose {
+  @apply bg-rose-500 text-white hover:bg-rose-600;
+}

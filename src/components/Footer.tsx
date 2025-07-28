@@ -1,6 +1,13 @@
 import Link from 'next/link'
 import { imgPath } from '@/lib/imgPath'
-import { BookOpenText, Heart, HomeIcon, UserIcon, Menu } from 'lucide-react'
+import {
+  BookOpenText,
+  Heart,
+  HomeIcon,
+  UserIcon,
+  Menu,
+  MoreHorizontal,
+} from 'lucide-react'
 
 export const SNSItems = [
   {
@@ -37,12 +44,12 @@ export const MobileItems = [
   },
   {
     label: '내정보',
-    href: '/auth/profile',
+    href: '/auth/mypage',
     icon: UserIcon,
   },
   {
-    label: '메뉴',
-    href: '/more/menu',
+    label: '더보기',
+    href: '/settings/more',
     icon: Menu,
   },
 ]

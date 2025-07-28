@@ -1,0 +1,21 @@
+/* card-layout.css */
+
+.card-box {
+  @apply rounded-xl p-4 mb-2 bg-white dark:bg-neutral-800 shadow;
+}
+
+.card-title {
+  @apply text-sm font-semibold mb-4 text-gray-800 dark:text-gray-100;
+}
+
+.card-action {
+  @apply flex flex-col items-center justify-center p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors;
+}
+
+.card-icon {
+  @apply w-6 h-6 mb-2 text-gray-800 dark:text-gray-100;
+}
+
+.card-label {
+  @apply text-sm text-gray-700 dark:text-gray-300;
+}

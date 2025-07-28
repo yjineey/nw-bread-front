@@ -41,7 +41,7 @@ nw-bread-front/
 │   │   │   ├── page.tsx
 │   │   │   ├── users/page.tsx
 │   │   │   ├── posts/page.tsx
-│   │   │   └── settings/page.tsx
+│   │   │   └── setting/page.tsx
 │   │   ├── bible/
 │   │   │   ├── layout.tsx
 │   │   │   ├── page.tsx
@@ -52,7 +52,7 @@ nw-bread-front/
 │   │   └── auth/
 │   │       ├── login/page.tsx
 │   │       ├── signup/page.tsx
-│   │       └── profile/page.tsx
+│   │       └── mypage/page.tsx
 │   │
 │   ├── components/
 │   │   ├── Header.tsx

@@ -53,7 +53,7 @@ export default function RootLayout({
           {/* Section (모바일 고정, PC 스크롤 시 사라짐) */}
           <div
             className="h-16 px-4 flex items-center justify-between border-b 
-                sticky top-0 z-30 bg-white dark:bg-neutral-900 
+                sticky top-0 z-30 bg-gray-50 dark:bg-neutral-900 
                 md:relative md:z-20"
           >
             <Section />
@@ -62,7 +62,7 @@ export default function RootLayout({
           {/* Header (PC 고정, 모바일에서는 스크롤 시 사라짐) */}
           <div
             className="h-16 px-4 flex items-center justify-between border-b 
-                sticky top-0 z-20 bg-white dark:bg-neutral-900 
+                sticky top-0 z-20 bg-gray-50 dark:bg-neutral-900 
                 md:sticky md:top-0 md:z-30 
                 [@media(max-width:767px)]:static"
           >

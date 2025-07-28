@@ -1,0 +1,41 @@
+/* 페이지 레이아웃 전용 스타일 */
+
+.page-wrapper {
+  @apply px-4 py-8;
+}
+
+.page-header {
+  @apply mb-6;
+}
+
+.page-header-title {
+  @apply text-2xl font-bold;
+}
+
+.page-header-description {
+  @apply text-sm text-gray-500 mt-1;
+}
+
+.page-actions {
+  @apply mb-6 flex justify-end;
+}
+
+.page-content {
+  @apply space-y-6;
+}
+
+.page-stats-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8;
+}
+
+.stat-card-label {
+  @apply text-sm text-gray-500;
+}
+
+.stat-card-value {
+  @apply text-xl font-semibold;
+}
+
+.activity-list {
+  @apply space-y-3 text-sm text-gray-700 dark:text-gray-300;
+}

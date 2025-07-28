@@ -43,11 +43,6 @@ export const AuthItems = [
     href: '/auth/login',
     icon: LogIn,
   },
-  {
-    label: '마이페이지',
-    href: '/auth/profile',
-    icon: UserCircle,
-  },
 ]
 export default function HeaderMain() {
   return (

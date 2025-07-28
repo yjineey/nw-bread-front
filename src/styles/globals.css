@@ -3,20 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* globals.css */
+@import './buttons.css';
+@import './page-layout.css';
+@import './card-layout.css';
+@import './input.css';
+
 body {
-  @apply bg-white text-gray-800 dark:bg-neutral-900 dark:text-gray-200;
+  @apply bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-gray-200;
 }
 
 .hover-link {
   @apply transition-colors 
     hover:text-blue-700 hover:font-semibold
     dark:hover:text-yellow-300;
-}
-
-/* .header-wrapper {
-  @apply h-16 px-4 flex items-center justify-between border-b;
-} */
-
-.page-wrapper {
-  @apply p-4 max-w-screen-md mx-auto flex-1 overflow-y-auto;
 }
