@@ -29,12 +29,12 @@ export const SNSItems = [
 export const MobileItems = [
   {
     label: '성경',
-    href: '/bible/read',
+    href: '/user/read',
     icon: BookOpenText,
   },
   {
     label: '큐티',
-    href: '/bible/qt',
+    href: '/user/qt',
     icon: Heart,
   },
   {
@@ -44,7 +44,7 @@ export const MobileItems = [
   },
   {
     label: '내정보',
-    href: '/auth/mypage',
+    href: '/auth/profile',
     icon: UserIcon,
   },
   {

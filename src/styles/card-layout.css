@@ -9,7 +9,8 @@
 }
 
 .card-action {
-  @apply flex flex-col items-center justify-center p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors;
+  @apply flex flex-col items-center justify-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-neutral-700 transition-colors;
+  @apply min-h-[80px];
 }
 
 .card-icon {
@@ -17,5 +18,6 @@
 }
 
 .card-label {
-  @apply text-sm text-gray-700 dark:text-gray-300;
+  @apply text-xs text-gray-700 dark:text-gray-300 text-center leading-tight;
+  @apply whitespace-nowrap overflow-hidden;
 }

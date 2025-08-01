@@ -6,9 +6,8 @@ import {
   Lock,
   Bell,
   Trash2,
-  BookOpen,
+  BookOpenCheck,
   Heart,
-  Sun,
   ShieldCheck,
   Users,
   Settings,
@@ -16,22 +15,24 @@ import {
   FileText,
   List,
   LayoutDashboard,
+  BookOpenText,
+  Church,
 } from 'lucide-react'
 
 const accountMenu = [
-  { label: '내 정보', href: '/auth/mypage', icon: User },
-  { label: '비밀번호 변경', href: '/auth/password', icon: Lock },
+  { label: '내 정보', href: '/auth/profile', icon: User },
+  { label: '비밀번호 변경', href: '/auth/change-password', icon: Lock },
   { label: '알림 설정', href: '/settings/alerts', icon: Bell },
   { label: '계정 탈퇴', href: '/settings/delete', icon: Trash2 },
 ]
 
 const userMenu = [
-  { label: '오늘의 말씀', href: '/bible/prayer', icon: Sun },
-  { label: '오늘의 QT', href: '/bible/qt', icon: Heart },
-  { label: '성경통독', href: '/bible/read', icon: BookOpen },
-  { label: '보혈선포기도문', href: '/bible/blood', icon: ShieldCheck },
-  { label: '가정예배', href: '/admin/worship', icon: Newspaper },
-  { label: '광고', href: '/admin/notice', icon: Newspaper },
+  { label: '성경통독', href: '/user/read', icon: BookOpenText },
+  { label: '오늘의 QT', href: '/user/qt', icon: Heart },
+  { label: '오늘의 말씀', href: '/user/prayer', icon: BookOpenCheck },
+  { label: '보혈기도문', href: '/user/blood', icon: ShieldCheck },
+  { label: '가정예배지', href: '/user/worship', icon: Newspaper },
+  { label: '교회 광고', href: '/user/announcements', icon: Church },
 ]
 
 const adminMenu = [
@@ -47,7 +48,7 @@ export default function MenuPage() {
     <div className="page-wrapper max-w-screen-md mx-auto spacer">
       <section className="card-box">
         <h2 className="card-title">내 계정 </h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-4 gap-4">
           {accountMenu.map(({ label, href, icon: Icon }) => (
             <Link key={href} href={href} className="card-action">
               <Icon className="card-icon" />
@@ -60,7 +61,7 @@ export default function MenuPage() {
       {/* 사용자 메뉴 */}
       <section className="card-box">
         <h2 className="card-title">사용자 메뉴</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-4 gap-4">
           {userMenu.map(({ label, href, icon: Icon }) => (
             <Link key={href} href={href} className="card-action">
               <Icon className="card-icon" />
@@ -73,7 +74,7 @@ export default function MenuPage() {
       {/* 관리자 메뉴 */}
       <section className="card-box">
         <h2 className="card-title">관리자 메뉴</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 sm:grid-cols-4 gap-4">
           {adminMenu.map(({ label, href, icon: Icon }) => (
             <Link key={href} href={href} className="card-action">
               <Icon className="card-icon" />

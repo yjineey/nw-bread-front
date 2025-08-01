@@ -8,7 +8,7 @@ type User = {
   phoneNumber?: string
 }
 
-export default function MyPage() {
+export default function profile() {
   const [user, setUser] = useState<User | null>(null)
   const [nickname, setNickname] = useState('')
   const [phone, setPhone] = useState('')

@@ -2,33 +2,32 @@ import Link from 'next/link'
 import {
   BookOpenText,
   Heart,
-  Sun,
+  BookOpenCheck,
   ShieldCheck,
   UserPlus,
   LogIn,
-  UserCircle,
 } from 'lucide-react'
 import ThemeToggle from '@/components/ThemeToggle'
 
 export const MenuItems = [
   {
-    label: '오늘의 말씀',
-    href: '/bible/prayer',
+    label: '성경통독',
+    href: '/user/read',
     icon: BookOpenText,
   },
   {
     label: '오늘의 QT',
-    href: '/bible/qt',
+    href: '/user/qt',
     icon: Heart,
   },
   {
-    label: '성경통독',
-    href: '/bible/read',
-    icon: Sun,
+    label: '오늘의 말씀',
+    href: '/user/prayer',
+    icon: BookOpenCheck,
   },
   {
     label: '보혈선포기도문',
-    href: '/bible/blood',
+    href: '/user/blood',
     icon: ShieldCheck,
   },
 ]

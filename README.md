@@ -52,7 +52,7 @@ nw-bread-front/
 │   │   └── auth/
 │   │       ├── login/page.tsx
 │   │       ├── signup/page.tsx
-│   │       └── mypage/page.tsx
+│   │       └── profile/page.tsx
 │   │
 │   ├── components/
 │   │   ├── Header.tsx
