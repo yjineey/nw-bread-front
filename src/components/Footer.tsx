@@ -1,13 +1,6 @@
 import Link from 'next/link'
 import { imgPath } from '@/lib/imgPath'
-import {
-  BookOpenText,
-  Heart,
-  HomeIcon,
-  UserIcon,
-  Menu,
-  MoreHorizontal,
-} from 'lucide-react'
+import { BookOpenText, Heart, HomeIcon, UserIcon, Menu } from 'lucide-react'
 
 export const SNSItems = [
   {
