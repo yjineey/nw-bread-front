@@ -282,8 +282,11 @@ export default function Monday() {
     주님은 우리의 재판장이시요, 율법을 세우신 이요, 우리의 왕이시니 그가 우리를 구원하실 것입니다.(경배)`
 
   return (
-    <div className="whitespace-pre-line text-sm px-4 leading-relaxed">
-      {content}
+    <div className="px-4 pb-4 space-y-4">
+      <label>[서론:다함께]</label>
+      <div className="whitespace-pre-line text-sm leading-relaxed">
+        {content}
+      </div>
     </div>
   )
 }

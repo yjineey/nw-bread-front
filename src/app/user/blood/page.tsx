@@ -1,22 +1,22 @@
 'use client'
 
 import { useState } from 'react'
-import MondayPrayer from './Monday'
-import TuesdayPrayer from './Tuesday'
-import WednesdayPrayer from './Wednesday'
-import ThursdayPrayer from './Thursday'
-import FridayPrayer from './Friday'
-import SaturdayPrayer from './Saturday'
-import SundayPrayer from './Sunday'
+import Monday from '@/app/user/blood/Monday'
+import Tuesday from '@/app/user/blood/Tuesday'
+import Wednesday from '@/app/user/blood/Wednesday'
+import Thursday from '@/app/user/blood/Thursday'
+import Friday from '@/app/user/blood/Friday'
+import Saturday from '@/app/user/blood/Saturday'
+import Sunday from '@/app/user/blood/Sunday'
 
 const dayComponents = {
-  월요일: <MondayPrayer />,
-  화요일: <TuesdayPrayer />,
-  수요일: <WednesdayPrayer />,
-  목요일: <ThursdayPrayer />,
-  금요일: <FridayPrayer />,
-  '서론과 결론': <SaturdayPrayer />,
-  모임용: <SundayPrayer />,
+  월요일: <Monday />,
+  화요일: <Tuesday />,
+  수요일: <Wednesday />,
+  목요일: <Thursday />,
+  금요일: <Friday />,
+  '서론과 결론': <Saturday />,
+  모임용: <Sunday />,
 }
 
 export default function PrayerPage() {
