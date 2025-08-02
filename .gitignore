@@ -5,6 +5,9 @@
 # pnpm
 .pnpm-store
 
+# pnpm lock
+pnpm-lock.yaml
+
 # testing
 /coverage
 
