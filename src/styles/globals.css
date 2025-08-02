@@ -12,9 +12,3 @@
 body {
   @apply bg-gray-50 text-gray-800 dark:bg-neutral-900 dark:text-gray-200;
 }
-
-.hover-link {
-  @apply transition-colors 
-    hover:text-blue-700 hover:font-semibold
-    dark:hover:text-yellow-300;
-}

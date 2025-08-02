@@ -24,11 +24,7 @@ export default function ThemeToggle() {
   }
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="p-2 border rounded text-sm hover-link hover:border-blue-700
-              dark:hover:border-yellow-300"
-    >
+    <button onClick={toggleTheme} className="pr-2">
       <Icon />
     </button>
   )

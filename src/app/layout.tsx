@@ -2,12 +2,12 @@ import '@/styles/globals.css'
 import Section from '@/components/Section'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import BottomNav from '@/components/BottomNav'
 
 export const metadata = {
-  title: 'Newway Bread', // 브라우저 탭에 표시될 제목
+  title: 'Newway Bread',
   description: 'Newway Church Bible App',
   openGraph: {
-    // sns공유시 표시될 정보
     type: 'website',
     siteName: 'Newway Church',
     title: 'Newway Bread',
@@ -30,57 +30,43 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="dark">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                try {
-                  const theme = localStorage.getItem('theme');
-                  if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-                    document.documentElement.classList.add('dark');
-                  }
-                } catch(_) {}
-              })();
-            `,
-          }}
-        />
-      </head>
-
-      {/* ⚠️ 이 페이지는 레이아웃 전용 스타일이며, 전역 CSS는 작성하지 않습니다. */}
+      <head />
       <body>
         <div className="max-w-screen-lg mx-auto min-h-screen flex flex-col">
-          {/* Section (모바일 고정, PC 스크롤 시 사라짐) */}
+          {/* Section (⚠️ 반드시 배경색 유지 - sticky 요소 겹침 방지) */}
           <div
             className="h-16 px-4 flex items-center justify-between border-b 
-                sticky top-0 z-30 bg-gray-50 dark:bg-neutral-900 
-                md:relative md:z-20"
+             border-gray-200 dark:border-neutral-800 
+             lg:sticky lg:top-0 lg:z-20 
+             bg-gray-50 dark:bg-neutral-900"
           >
             <Section />
           </div>
 
-          {/* Header (PC 고정, 모바일에서는 스크롤 시 사라짐) */}
+          {/* Header */}
           <div
             className="h-16 px-4 flex items-center justify-between border-b 
-                sticky top-0 z-20 bg-gray-50 dark:bg-neutral-900 
-                md:sticky md:top-0 md:z-30 
-                [@media(max-width:767px)]:static"
+             border-gray-200 dark:border-neutral-800 
+             sticky top-0 z-20 lg:top-16 lg:z-30
+             bg-gray-50 dark:bg-neutral-900"
           >
             <Header />
           </div>
 
-          <main className="flex-1 overflow-y-auto md:pb-0 pb-16">
-            {children}
+          {/* Main Content */}
+          <main className="flex-1 flex flex-col">
+            <div className="flex-1">{children}</div>
+
+            {/* Footer 주변 여백은 여기서 명시 */}
+            <div className="px-4 py-5">
+              <Footer />
+            </div>
           </main>
 
-          {/* Footer (모바일 고정 h-16, PC는 자동 높이, 일반 배치) */}
-          <footer
-            className="border-t z-30 
-                     fixed bottom-0 w-full h-16 
-                     md:static md:h-auto md:w-auto"
-          >
-            <Footer />
-          </footer>
+          {/* 모바일 네비게이션 */}
+          <div className="fixed bottom-0 left-0 right-0 h-16 p-4 border-t border-gray-200 dark:border-neutral-800  bg-neutral-900 text-gray-200 z-50 lg:hidden">
+            <BottomNav />
+          </div>
         </div>
       </body>
     </html>

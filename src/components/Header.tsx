@@ -1,4 +1,6 @@
+'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import {
   BookOpenText,
   Heart,
@@ -43,32 +45,50 @@ export const AuthItems = [
     icon: LogIn,
   },
 ]
+
 export default function HeaderMain() {
+  const pathname = usePathname()
+
   return (
     <>
       <div className="flex gap-4 text-sm font-medium mr-4">
-        {MenuItems.map(({ label, href, icon: Icon }) => (
-          <Link
-            key={label}
-            href={href}
-            className="flex items-center gap-2 hover-link"
-          >
-            <Icon className="sm:hidden w-4 h-4" />
-            <span className="hidden sm:inline">{label}</span>
-          </Link>
-        ))}
+        {MenuItems.map(({ label, href, icon: Icon }) => {
+          const isActive = pathname.startsWith(href)
+          return (
+            <Link
+              key={label}
+              href={href}
+              className={`flex items-center gap-2 ${
+                isActive
+                  ? 'text-indigo-700 dark:text-indigo-400 font-semibold'
+                  : 'hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors'
+              }`}
+            >
+              <Icon className="sm:hidden w-4 h-4" />
+              <span className="hidden sm:inline">{label}</span>
+            </Link>
+          )
+        })}
       </div>
+
       <div className="flex gap-4 text-sm font-medium">
-        {AuthItems.map(({ label, href, icon: Icon }) => (
-          <Link
-            key={label}
-            href={href}
-            className="flex items-center gap-2 hover-link"
-          >
-            <Icon className="sm:hidden w-4 h-4" />
-            <span className="hidden sm:inline">{label}</span>
-          </Link>
-        ))}
+        {AuthItems.map(({ label, href, icon: Icon }) => {
+          const isActive = pathname.startsWith(href)
+          return (
+            <Link
+              key={label}
+              href={href}
+              className={`flex items-center gap-2 ${
+                isActive
+                  ? 'text-indigo-700 dark:text-indigo-400 font-semibold'
+                  : 'hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors'
+              }`}
+            >
+              <Icon className="sm:hidden w-4 h-4" />
+              <span className="hidden sm:inline">{label}</span>
+            </Link>
+          )
+        })}
         <ThemeToggle />
       </div>
     </>
