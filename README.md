@@ -31,52 +31,41 @@ pnpm start
 
 ```bash
 nw-bread-front/
-├── public/                      # 정적 리소스 (이미지, 아이콘 등)
+├── public/                       # 정적 파일 (이미지, 폰트, favicon 등)
+│
 ├── src/
-│   ├── app/
-│   │   ├── layout.tsx           # 공통 HTML 구조
-│   │   ├── page.tsx             # 홈 페이지
+│   ├── app/                      # Next.js App Router 엔트리
 │   │   ├── admin/
-│   │   │   ├── layout.tsx
-│   │   │   ├── page.tsx
-│   │   │   ├── users/page.tsx
-│   │   │   ├── posts/page.tsx
-│   │   │   └── setting/page.tsx
-│   │   ├── bible/
-│   │   │   ├── layout.tsx
-│   │   │   ├── page.tsx
-│   │   │   ├── oneread/page.tsx
-│   │   │   ├── qt/page.tsx
-│   │   │   ├── prayer/page.tsx
-│   │   │   └── blood/page.tsx
-│   │   └── auth/
-│   │       ├── login/page.tsx
-│   │       ├── signup/page.tsx
-│   │       └── profile/page.tsx
+│   │   ├── auth/
+│   │   ├── settings/
+│   │   ├── user/
+│   │   ├── layout.tsx
+│   │   └── page.tsx
 │   │
-│   ├── components/
+│   ├── components/               # 공용 UI 컴포넌트
 │   │   ├── Header.tsx
 │   │   ├── Footer.tsx
 │   │   └── ThemeToggle.tsx
 │   │
-│   ├── styles/
-│   │   ├── globals.css         # 전역 Tailwind 스타일
-│   │   ├── admin.css
-│   │   └── bible.css
+│   ├── lib/
 │   │
-│   └── utils/                   # 유틸 함수
+│   └── styles/                   # 전역 및 모듈별 Tailwind CSS
+│       ├── globals.css
+│       ├── buttons.css
+│       ├── card-layout.css
+│       ├── input.css
+│       └── page-layout.css
 │
 ├── .gitignore
-├── .prettierrc
-├── .eslint.config.mjs
-├── next.config.ts
+├── .prettierrc                   # 코드 포맷 설정
+├── .eslint.config.mjs            # ESLint 설정
+├── next.config.ts                # Next.js 설정
 ├── package.json
-├── pnpm-lock.yaml
-├── postcss.config.js
-├── README.md
-├── tailwind.config.js
-└── tsconfig.json
-
+├── pnpm-lock.yaml                # pnpm lockfile
+├── postcss.config.js             # PostCSS (Tailwind) 설정
+├── tailwind.config.js            # Tailwind CSS 설정
+├── tsconfig.json                 # TypeScript 설정
+└── README.md
 ```
 
 ## 📑 라이선스 (License)
