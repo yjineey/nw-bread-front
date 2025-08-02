@@ -13,23 +13,22 @@ export default function Profile() {
   const [nickname, setNickname] = useState('')
   const [phone, setPhone] = useState('')
 
-  useEffect(() => {
-    // 사용자 정보 불러오기
-    fetch('/api/user/me')
-      .then(res => res.json())
-      .then(data => {
-        setUser(data)
-        setNickname(data.nickname || '')
-        setPhone(data.phoneNumber || '')
-      })
-  }, [])
+  // useEffect(() => {
+  //   fetch('/api/user/me')
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       setUser(data)
+  //       setNickname(data.nickname || '')
+  //       setPhone(data.phoneNumber || '')
+  //     })
+  // }, [])
 
   const handleSubmit = async () => {
-    await fetch('/api/user/update', {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nickname, phoneNumber: phone }),
-    })
+    // await fetch('/api/user/update', {
+    //   method: 'PATCH',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ nickname, phoneNumber: phone }),
+    // })
     alert('정보가 수정되었습니다.')
   }
 

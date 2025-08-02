@@ -10,13 +10,12 @@ export default function AdminPostCreatePage() {
   const [content, setContent] = useState('')
 
   const handleSubmit = async () => {
-    // TODO: 실제 저장 API 연결
     alert('게시글이 등록되었습니다.')
     router.push('/admin/posts')
   }
 
   return (
-    <div className="page-wrapper max-w-screen-md mx-auto">
+    <div className="page-wrapper">
       <div className="page-header">
         <h1 className="page-header-title">게시글 등록</h1>
         <p className="page-header-description">

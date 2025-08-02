@@ -29,7 +29,7 @@ export default function Footer() {
 
   return (
     <>
-      <div className="max-w-5xl mx-auto space-y-6">
+      <div className="max-w-5xl mx-auto space-y-4">
         {/* 드롭다운 */}
         <div>
           <button
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
 
         {/* SNS 아이콘 */}
-        <div className="flex gap-4 pt-2">
+        <div className="flex gap-4 ">
           {SNSItems.map(({ label, href, icon }) => (
             <Link
               key={label}

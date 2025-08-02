@@ -13,7 +13,6 @@ export default function AdminUserPage() {
   const [users, setUsers] = useState<User[]>([])
 
   useEffect(() => {
-    // TODO: 실제 API로 대체
     setUsers([
       { id: 1, name: '홍길동', email: 'hong@example.com', role: 'user' },
       { id: 2, name: '관리자', email: 'admin@example.com', role: 'admin' },
@@ -21,7 +20,7 @@ export default function AdminUserPage() {
   }, [])
 
   return (
-    <div className="page-wrapper max-w-screen-lg mx-auto">
+    <div className="page-wrapper">
       <div className="page-header">
         <h1 className="page-header-title">사용자 관리</h1>
         <p className="page-header-description">

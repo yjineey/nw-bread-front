@@ -8,12 +8,10 @@ export default function SignupPage() {
   const [nickname, setNickname] = useState('')
 
   const handleSignup = async () => {
-    // 회원가입 로직
     alert('회원가입 시도')
   }
 
   const handleKakaoSignup = () => {
-    // 카카오 회원가입 연동
     alert('카카오로 회원가입')
   }
 

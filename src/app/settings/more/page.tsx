@@ -45,7 +45,7 @@ const adminMenu = [
 
 export default function MenuPage() {
   return (
-    <div className="page-wrapper max-w-screen-md mx-auto spacer">
+    <div className="page-wrapper">
       <section className="card-box">
         <h2 className="card-title">내 계정 </h2>
         <div className="grid grid-cols-4 sm:grid-cols-4 gap-4">

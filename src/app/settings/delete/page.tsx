@@ -10,7 +10,6 @@ export default function DeleteAccountPage() {
       '정말로 회원 탈퇴하시겠습니까? 이 작업은 되돌릴 수 없습니다.'
     )
     if (confirmed) {
-      // TODO: 탈퇴 API 호출
       alert('탈퇴 처리 완료')
       router.push('/')
     }

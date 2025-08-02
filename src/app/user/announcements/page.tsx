@@ -13,7 +13,6 @@ export default function AnnouncementsPage() {
   const [announcements, setAnnouncements] = useState<Announcement[]>([])
 
   useEffect(() => {
-    // 실제론 API 요청으로 대체
     setAnnouncements([
       {
         id: 1,
@@ -31,7 +30,7 @@ export default function AnnouncementsPage() {
   }, [])
 
   return (
-    <div className="page-wrapper max-w-2xl mx-auto">
+    <div className="page-wrapper">
       <div className="page-header">
         <h1 className="page-header-title">교회 광고</h1>
         <p className="page-header-description">매주 주보 광고를 확인하세요.</p>

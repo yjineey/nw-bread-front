@@ -7,12 +7,10 @@ export default function LoginPage() {
   const [password, setPassword] = useState('')
 
   const handleLogin = async () => {
-    // 로그인 로직
     alert('로그인 시도')
   }
 
   const handleKakaoLogin = () => {
-    // 카카오 로그인 연동
     alert('카카오 로그인')
   }
 

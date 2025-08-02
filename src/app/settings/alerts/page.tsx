@@ -16,7 +16,6 @@ export default function NotificationSettingsPage() {
   }
 
   const handleSave = () => {
-    // TODO: API 저장
     alert('알림 설정이 저장되었습니다.')
   }
 
@@ -65,7 +64,6 @@ export default function NotificationSettingsPage() {
   )
 }
 
-// ✅ 개별 알림 항목 컴포넌트
 function SettingItem({
   label,
   checked,

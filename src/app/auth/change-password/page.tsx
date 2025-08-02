@@ -13,7 +13,6 @@ export default function ChangePasswordPage() {
       return
     }
 
-    // 실제 요청은 API 연동 시 여기에 작성
     alert('비밀번호가 변경되었습니다.')
   }
 

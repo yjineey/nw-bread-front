@@ -47,24 +47,24 @@ export default function RootLayout({
           <div
             className="h-16 px-4 flex items-center justify-between border-b 
              border-gray-200 dark:border-neutral-800 
-             sticky top-0 z-20 lg:top-16 lg:z-30
+             sticky top-0 z-30 lg:top-16 lg:z-20
              bg-gray-50 dark:bg-neutral-900"
           >
             <Header />
           </div>
 
           {/* Main Content */}
-          <main className="flex-1 flex flex-col">
+          <main className="flex-1 flex flex-col mb-16 lg:mb-0">
             <div className="flex-1">{children}</div>
 
             {/* Footer 주변 여백은 여기서 명시 */}
-            <div className="px-4 py-5">
+            <div className="px-4 py-4 border-t border-gray-200 dark:border-neutral-800 ">
               <Footer />
             </div>
           </main>
 
           {/* 모바일 네비게이션 */}
-          <div className="fixed bottom-0 left-0 right-0 h-16 p-4 border-t border-gray-200 dark:border-neutral-800  bg-neutral-900 text-gray-200 z-50 lg:hidden">
+          <div className="fixed z-20 bottom-0 left-0 right-0 h-16 p-4 border-t border-gray-200 dark:border-neutral-800  bg-neutral-900 text-gray-200 lg:hidden">
             <BottomNav />
           </div>
         </div>

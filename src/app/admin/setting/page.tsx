@@ -8,7 +8,6 @@ export default function AdminSettingsPage() {
   const [adminAlert, setAdminAlert] = useState(false)
 
   const handleSave = () => {
-    // TODO: API 연동
     alert('관리자 설정이 저장되었습니다.')
   }
 

@@ -17,12 +17,10 @@ export default function AdminPostListPage() {
   const [page, setPage] = useState(1)
   const totalPages = 3
 
-  // 검색 관련 state (필요 시 확장)
   const [keyword, setKeyword] = useState('')
   const [status, setStatus] = useState('')
 
   useEffect(() => {
-    // TODO: 실제 API로 대체
     setPosts([
       {
         id: 1,
@@ -44,7 +42,7 @@ export default function AdminPostListPage() {
   }, [page])
 
   return (
-    <div className="page-wrapper max-w-screen-lg mx-auto">
+    <div className="page-wrapper">
       <div className="page-header">
         <h1 className="page-header-title">게시글 관리</h1>
         <p className="page-header-description">
