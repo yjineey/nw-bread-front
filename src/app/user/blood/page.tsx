@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { ReactElement, useState } from 'react'
 import Monday from '@/app/user/blood/Monday'
 import Tuesday from '@/app/user/blood/Tuesday'
 import Wednesday from '@/app/user/blood/Wednesday'
@@ -9,7 +9,7 @@ import Friday from '@/app/user/blood/Friday'
 import Saturday from '@/app/user/blood/Saturday'
 import Sunday from '@/app/user/blood/Sunday'
 
-const dayComponents = {
+const dayComponents: Record<string, ReactElement> = {
   월요일: <Monday />,
   화요일: <Tuesday />,
   수요일: <Wednesday />,
@@ -44,7 +44,7 @@ export default function PrayerPage() {
           </select>
         </div>
         {/* 요일별 기도문 */}
-        {(dayComponents as any)[selectedDay]}{' '}
+        {dayComponents[selectedDay]}{' '}
       </div>
     </div>
   )
