@@ -10,7 +10,8 @@ type User = {
 }
 
 export default function Profile() {
-  const [user, setUser] = useState<User | null>(null)
+  const [user] = useState<User | null>(null)
+  // const [user, setUser] = useState<User | null>(null)
   const [nickname, setNickname] = useState('')
   const [phone, setPhone] = useState('')
 
