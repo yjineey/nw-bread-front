@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+// import { useEffect, useState } from 'react'
 
 type User = {
   email: string
